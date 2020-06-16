@@ -8,3 +8,8 @@ and type `yarn start` to run it.
 Enjoy!
 
 Tips and `pull-requests` are welcome.
+
+## Libraries && Dependencies
+react-Icons
+react-router-dom
+styled-components
