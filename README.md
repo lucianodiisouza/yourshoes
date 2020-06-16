@@ -1,4 +1,4 @@
-## RocketShoes
+## YourShoes
 An application to fix React / Flux and Redux concepts creating a Shoes Store.
 
 ## How to install?
