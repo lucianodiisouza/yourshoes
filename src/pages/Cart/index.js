@@ -7,7 +7,7 @@ import {
 } from 'react-icons/md';
 import { Container, ProductTable, Total } from './styles';
 
-function Cart({ cart }) {
+function Cart({ cart, dispatch }) {
     return (
         <Container>
             <ProductTable>
@@ -38,7 +38,10 @@ function Cart({ cart }) {
                                             color="#069"
                                         />
                                     </button>
-                                    <input type="number" value={product.amount} />
+                                    <input
+                                        type="number"
+                                        value={product.amount}
+                                    />
                                     <button type="button">
                                         <MdAddCircleOutline
                                             size={20}
@@ -51,7 +54,15 @@ function Cart({ cart }) {
                                 <strong>R$ 259,80</strong>
                             </td>
                             <td>
-                                <button type="button">
+                                <button
+                                    type="button"
+                                    onClick={() =>
+                                        dispatch({
+                                            type: 'REMOVE_FROM_CART',
+                                            id: product.id,
+                                        })
+                                    }
+                                >
                                     <MdDelete size={20} color="#069" />
                                 </button>
                             </td>
